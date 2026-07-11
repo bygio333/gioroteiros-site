@@ -263,6 +263,79 @@
 .structure-item p{color:rgba(255,255,255,.55);font-size:15px;line-height:1.6;}
 }
 
+.showcase{
+    margin-top:90px;
+    text-align:center;
+}
+.showcase-tag{
+    display:inline-block;
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--pink);
+    font-weight:600;
+    margin-bottom:14px;
+}
+.showcase h3{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(28px,6vw,48px);
+    line-height:1.05;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+}
+.showcase h3 span{color:var(--pink);}
+.showcase-sub{
+    font-size:15px;
+    color:rgba(255,255,255,.55);
+    max-width:480px;
+    margin:0 auto 60px;
+    font-weight:300;
+    line-height:1.6;
+}
+.card-fan{
+    position:relative;
+    height:440px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:10px;
+}
+.card-fan .card{
+    position:absolute;
+    width:230px;
+    border-radius:14px;
+    overflow:hidden;
+    border:6px solid #fff;
+    box-shadow:0 25px 50px rgba(0,0,0,.55);
+    cursor:pointer;
+    transition:transform .4s cubic-bezier(.2,.9,.3,1.2), box-shadow .4s ease, z-index 0s;
+    background:#111;
+}
+.card-fan .card img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+.card-fan .card-1{ transform:rotate(-10deg) translate(-105px, 10px); z-index:1; }
+.card-fan .card-2{ transform:rotate(0deg) translate(0, -18px); z-index:2; }
+.card-fan .card-3{ transform:rotate(10deg) translate(105px, 10px); z-index:1; }
+.card-fan .card:hover{
+    transform:scale(1.18) rotate(0deg) translateY(-34px) !important;
+    z-index:10;
+    box-shadow:0 35px 65px rgba(247,103,211,.45);
+}
+@media(max-width:768px){
+    .card-fan{height:340px;}
+    .card-fan .card{width:150px;border-width:4px;}
+    .card-fan .card-1{ transform:rotate(-12deg) translate(-62px, 14px); }
+    .card-fan .card-2{ transform:rotate(0deg) translate(0, -14px); }
+    .card-fan .card-3{ transform:rotate(12deg) translate(62px, 14px); }
+    .card-fan .card:hover{transform:scale(1.25) rotate(0deg) translateY(-24px) !important;}
+    .showcase{margin-top:60px;}
+    .showcase-sub{margin-bottom:44px;}
+}
+
 </style>
 </head>
 <body>
@@ -333,8 +406,20 @@
       <div class="structure-item"><div class="structure-icon">⌑</div><div><h3>Pra sair do óbvio</h3><p>experiências locais e lugares especiais.</p></div></div>
       <div class="structure-item"><div class="structure-icon">⌂</div><div><h3>Cidades próximas</h3><p>bate-voltas imperdíveis para complementar a viagem.</p></div></div>
     </div>
+
+    <div class="showcase">
+      <span class="showcase-tag">Espia só</span>
+      <h3>O que <span>você vai encontrar</span></h3>
+      <p class="showcase-sub">Passa o mouse (ou toca) em cada página pra ver de perto como é o material completo.</p>
+      <div class="card-fan">
+        <div class="card card-1"><img src="images/preview-londres.jpg" alt="Exemplo de página - Londres"></div>
+        <div class="card card-2"><img src="images/preview-paris.jpg" alt="Exemplo de página - Paris"></div>
+        <div class="card card-3"><img src="images/preview-roma.jpg" alt="Exemplo de página - Roma"></div>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <section class="roteiros">
   <div class="roteiros-inner">
