@@ -336,6 +336,61 @@
     .showcase-sub{margin-bottom:44px;}
 }
 
+
+.hero-callout{
+  margin-top:24px;
+  background:#fff;
+  color:#111;
+  padding:14px 18px;
+  border-radius:14px;
+  max-width:540px;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:14px;
+  line-height:1.5;
+  border-left:4px solid var(--pink);
+}
+.destinations{
+  padding:90px 24px;
+  background:#fff;
+}
+.destinations-inner{
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+.destinations-label{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--pink);
+  margin-bottom:16px;
+}
+.destinations h2{
+  font-family:'Anton',sans-serif;
+  font-size:clamp(34px,6vw,58px);
+  line-height:1;
+  margin-bottom:20px;
+}
+.destinations p{
+  max-width:600px;
+  margin:0 auto 40px;
+  color:#666;
+}
+.destinations-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:12px;
+}
+.destinations-grid span{
+  background:#fafafa;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:999px;
+  padding:12px 18px;
+  font-size:14px;
+}
+
 </style>
 </head>
 <body>
@@ -347,11 +402,16 @@
 
 <section class="hero">
   <h1 class="hero-title">SEU ROTEIRO<br>DE VIAGEM</h1>
-  <div class="hero-sub">Roteiros prontos, completos e testados para você aproveitar cada minuto da viagem</div>
+  <div class="hero-sub">Chegue ao destino sabendo exatamente onde ir, onde comer e como aproveitar cada dia sem perder horas pesquisando.</div>
   <div class="hero-video-wrap">
     <img src="IMG_9706.jpg" alt="Giovana viajando">
   </div>
-  <div class="hero-cta">
+  
+<div class="hero-callout">
+✨ Criado a partir das minhas próprias viagens — não por uma editora, nem por inteligência artificial.
+</div>
+
+<div class="hero-cta">
     <a href="#" onclick="showCityPicker();return false;" class="btn-pink">compre aqui</a>
   </div>
   <div class="by-gio">by gio</div>
@@ -359,8 +419,12 @@
 
 <section class="about">
   <div class="about-text reveal-left">
-    <div class="label">About me</div>
-    <p>Oie, meu nome é <strong>Giovana</strong>, sou apaixonada por explorar o mundo e transformar viagens em experiências únicas que você pode ter acesso!</p>
+    <div class="label">Criado por quem realmente esteve lá</div>
+    
+<p>Estes roteiros não foram criados por uma editora nem por inteligência artificial.</p>
+<p>São recomendações reunidas ao longo das minhas próprias viagens, organizadas da forma que eu gostaria de ter encontrado antes de embarcar.</p>
+<p>Aqui você encontra os lugares que realmente valeram a pena, os erros que eu evitaria repetir e tudo o que eu recomendaria para uma amiga.</p>
+
     <a href="#" onclick="showCityPicker();return false;" class="btn-pink">eu quero!!!</a>
   </div>
   <div class="about-img reveal-right">
@@ -421,7 +485,31 @@
 </section>
 
 
+
+<section class="destinations">
+  <div class="destinations-inner">
+    <div class="destinations-label">DESTINOS QUE JÁ EXPLOREI</div>
+    <h2>Recomendações construídas em experiências reais.</h2>
+    <p>Cada roteiro foi criado a partir de lugares que visitei pessoalmente ao longo dos últimos anos.</p>
+
+    <div class="destinations-grid">
+      <span>🇫🇷 Paris</span><span>🇬🇧 Londres</span><span>🇵🇹 Lisboa</span>
+      <span>🇮🇹 Roma</span><span>🇮🇹 Milão</span><span>🇮🇹 Florença</span>
+      <span>🇮🇹 Nápoles</span><span>🇮🇹 Costa Amalfitana</span>
+      <span>🇪🇸 Madrid</span><span>🇪🇸 Barcelona</span>
+      <span>🇫🇷 Nice</span><span>🇫🇷 Lille</span>
+      <span>🇩🇰 Copenhagen</span>
+      <span>🇦🇷 Buenos Aires</span><span>🇦🇷 Mendoza</span>
+      <span>🇨🇱 Santiago</span>
+      <span>🇨🇴 Medellín</span><span>🇨🇴 Cartagena</span>
+      <span>🇨🇴 Bogotá</span><span>🇨🇴 San Andrés</span>
+      <span>🇲🇽 Cancún</span><span>🇺🇾 Montevidéu</span>
+    </div>
+  </div>
+</section>
+
 <section class="roteiros">
+
   <div class="roteiros-inner">
     <div class="roteiros-header reveal">
       <h2>Roteiros disponíveis</h2>
