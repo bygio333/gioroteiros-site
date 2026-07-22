@@ -504,19 +504,19 @@
       <h2>Roteiros disponíveis</h2>
       <a href="#" onclick="trackCTA('cta_roteiros');return false;" class="btn-pink">Compre Aqui</a>
     </div>
-    <a href="https://pay.kiwify.com.br/k33OJFy" target="_blank" class="roteiro-item reveal">
+    <a href="https://pay.kiwify.com.br/k33OJFy" target="_blank" onclick="return trackRoteiro('roteiro_paris_lista', this.href);" class="roteiro-item reveal">
       <span class="roteiro-name">Paris</span>
       <div class="roteiro-right"><span class="roteiro-price">R$47</span><span class="roteiro-arrow">→</span></div>
     </a>
-    <a href="https://pay.kiwify.com.br/lUkYVPK" target="_blank" class="roteiro-item reveal">
+    <a href="https://pay.kiwify.com.br/lUkYVPK" target="_blank" onclick="return trackRoteiro('roteiro_lisboa_lista', this.href);" class="roteiro-item reveal">
       <span class="roteiro-name">Lisboa</span>
       <div class="roteiro-right"><span class="roteiro-price">R$47</span><span class="roteiro-arrow">→</span></div>
     </a>
-    <a href="https://pay.kiwify.com.br/fbpqh3F" target="_blank" class="roteiro-item reveal">
+    <a href="https://pay.kiwify.com.br/fbpqh3F" target="_blank" onclick="return trackRoteiro('roteiro_roma_lista', this.href);" class="roteiro-item reveal">
       <span class="roteiro-name">Roma</span>
       <div class="roteiro-right"><span class="roteiro-price">R$47</span><span class="roteiro-arrow">→</span></div>
     </a>
-    <a href="https://pay.kiwify.com.br/0AB4qry" target="_blank" class="roteiro-item reveal">
+    <a href="https://pay.kiwify.com.br/0AB4qry" target="_blank" onclick="return trackRoteiro('roteiro_londres_lista', this.href);" class="roteiro-item reveal">
       <span class="roteiro-name">Londres</span>
       <div class="roteiro-right"><span class="roteiro-price">R$47</span><span class="roteiro-arrow">→</span></div>
     </a>
@@ -591,7 +591,7 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, 
     <p style="font-size:11px; text-transform:uppercase; letter-spacing:3px; color:rgba(255,255,255,0.4); margin-bottom:12px;">escolha seu destino</p>
     <h2 style="font-family:'Anton',sans-serif; font-size:clamp(28px,7vw,48px); color:#fff; text-transform:uppercase; text-align:center; margin-bottom:40px; letter-spacing:0.5px;">Qual país você vai visitar?</h2>
     <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px; width:100%; max-width:700px;">
-      <a href="https://pay.kiwify.com.br/k33OJFy" target="_blank" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      <a href="https://pay.kiwify.com.br/k33OJFy" target="_blank" onclick="return trackRoteiro('roteiro_paris_card', this.href);" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
         <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="Paris" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.src='https://images.unsplash.com/photo-1431274172761-fca41d930114?w=600&q=80'">
         <div style="position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,0.75));"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 14px 14px;">
@@ -599,7 +599,7 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, 
           <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">Comprar agora →</div>
         </div>
       </a>
-      <a href="https://pay.kiwify.com.br/lUkYVPK" target="_blank" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      <a href="https://pay.kiwify.com.br/lUkYVPK" target="_blank" onclick="return trackRoteiro('roteiro_lisboa_card', this.href);" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
         <img src="https://images.unsplash.com/photo-1580323956656-26bbb7e92a5d?w=600&q=80" alt="Lisboa" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.src='https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=600&q=80'">
         <div style="position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,0.75));"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 14px 14px;">
@@ -607,7 +607,7 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, 
           <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">Comprar agora →</div>
         </div>
       </a>
-      <a href="https://pay.kiwify.com.br/fbpqh3F" target="_blank" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      <a href="https://pay.kiwify.com.br/fbpqh3F" target="_blank" onclick="return trackRoteiro('roteiro_roma_card', this.href);" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
         <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80" alt="Roma" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.src='https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600&q=80'">
         <div style="position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,0.75));"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 14px 14px;">
@@ -615,7 +615,7 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, 
           <div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:2px;">Comprar agora →</div>
         </div>
       </a>
-      <a href="https://pay.kiwify.com.br/0AB4qry" target="_blank" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+      <a href="https://pay.kiwify.com.br/0AB4qry" target="_blank" onclick="return trackRoteiro('roteiro_londres_card', this.href);" style="text-decoration:none; border-radius:16px; overflow:hidden; position:relative; aspect-ratio:2/3; display:block; cursor:pointer; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
         <img src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=600&q=80" alt="Londres" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.src='https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=80'">
         <div style="position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(0,0,0,0.75));"></div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 14px 14px;">
@@ -650,10 +650,14 @@ function trackCTA(name){
   }
   showCityPicker();
 }
-function trackRoteiro(name){
+function trackRoteiro(name,url){
   if(typeof gtag==='function'){
-    gtag('event',name,{event_category:'Roteiro',event_label:name});
+    gtag('event',name,{event_category:'Roteiro',event_label:name,event_callback:function(){window.location.href=url;}});
+    setTimeout(function(){window.location.href=url;},500);
+    return false;
   }
+  window.location.href=url;
+  return false;
 }
 </script>
 
