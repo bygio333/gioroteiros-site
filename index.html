@@ -405,7 +405,7 @@
 
 <nav>
   <div class="nav-logo">ROTEIROS <span>BY GIO</span></div>
-  <a href="#" onclick="showCityPicker();return false;" class="nav-btn">Compre Aqui</a>
+  <a href="#" onclick="trackCTA('cta_header');return false;" class="nav-btn">Compre Aqui</a>
 </nav>
 
 <section class="hero">
@@ -416,7 +416,7 @@
   </div>
 
 <div class="hero-cta">
-    <a href="#" onclick="showCityPicker();return false;" class="btn-pink">Compre Aqui</a>
+    <a href="#" onclick="trackCTA('cta_hero');return false;" class="btn-pink">Compre Aqui</a>
   </div>
   <div class="by-gio">by gio</div>
 </section>
@@ -502,7 +502,7 @@
   <div class="roteiros-inner">
     <div class="roteiros-header reveal">
       <h2>Roteiros disponíveis</h2>
-      <a href="#" onclick="showCityPicker();return false;" class="btn-pink">Compre Aqui</a>
+      <a href="#" onclick="trackCTA('cta_roteiros');return false;" class="btn-pink">Compre Aqui</a>
     </div>
     <a href="https://pay.kiwify.com.br/k33OJFy" target="_blank" class="roteiro-item reveal">
       <span class="roteiro-name">Paris</span>
@@ -535,7 +535,7 @@
   Depois de conhecer diferentes destinos, reuni tudo o que realmente vale a pena: restaurantes, cafés, passeios e dicas que fizeram a diferença nas minhas viagens. Hoje transformei tudo isso em roteiros práticos para que você aproveite cada destino ao máximo, economizando tempo e evitando horas de pesquisa.
 </p>
 
-    <a href="#" onclick="showCityPicker();return false;" class="btn-pink">Eu Quero!!!</a>
+    <a href="#" onclick="trackCTA('cta_eu_quero');return false;" class="btn-pink">Eu Quero!!!</a>
   </div>
   <div class="about-img reveal-right">
     <img src="IMG_3407.JPEG" alt="Giovana em Londres">
@@ -640,6 +640,21 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, 
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') hideCityPicker();
   });
+</script>
+
+
+<script>
+function trackCTA(name){
+  if(typeof gtag==='function'){
+    gtag('event',name,{event_category:'CTA',event_label:name});
+  }
+  showCityPicker();
+}
+function trackRoteiro(name){
+  if(typeof gtag==='function'){
+    gtag('event',name,{event_category:'Roteiro',event_label:name});
+  }
+}
 </script>
 
 </body>
